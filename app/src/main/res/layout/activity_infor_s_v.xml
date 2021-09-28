@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InforActivity">
+
+    <TextView
+        android:id="@+id/lthongtin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Thông tin sinh viên" />
+
+    <TextView
+        android:id="@+id/lmasv"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lthongtin"
+        android:text="Mã sinh viên:" />
+
+    <EditText
+        android:id="@+id/txtmasv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lthongtin"
+        android:layout_toRightOf="@id/lmasv"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/ltensv"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtmasv"
+        android:text="Tên Sinh viên:" />
+
+    <EditText
+        android:id="@+id/txttensv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtmasv"
+        android:layout_toRightOf="@id/ltensv"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/lgioitinh"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txttensv"
+        android:text="Giới tính:" />
+
+    <RadioGroup
+        android:id="@+id/radiogroupsex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txttensv"
+        android:layout_toRightOf="@id/lgioitinh"
+        android:checkedButton="@id/radioButtonNam"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonNam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nam" />
+
+        <RadioButton
+            android:id="@+id/radioButtonNu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nữ" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/llop"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radiogroupsex"
+        android:text="Lớp" />
+
+    <Spinner
+        android:id="@+id/spinnerlop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radiogroupsex"
+        android:layout_toRightOf="@id/llop" />
+
+    <LinearLayout
+        android:id="@+id/layout_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/layout_image"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnluu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Lưu" />
+
+        <Button
+            android:id="@+id/btnlamlai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Làm lại" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_image"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/spinnerlop"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/noavatar"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="5dp" />
+    </LinearLayout>
+
+</RelativeLayout>
